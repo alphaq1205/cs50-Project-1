@@ -1,0 +1,102 @@
+{%extends "layout.html"%}
+
+            {%block body%}
+<!-- <div class="middle_sec"> -->
+                <div class="detail"> 
+                    <div class="border">               
+                        <div class="book_img"></div> 
+                        {%for data in bookdtl%}
+                        <aside class="sidebar">
+                            <section>
+                                <h1>{{data.title}}</h1>
+                                <h3>{{data.author}}</h3>
+                            </section>
+                        <ul>
+                            <li>
+                                <h4>About Book</h4>
+                                <p>The {{data.title}} is a best-selling {{data.years}} self-help book by {{data.author}}, based on the earlier film of the same name. It is based on the belief of the law of attraction, which claims that thoughts can change a person's life directly. The book has sold 30 million copies worldwide and has been translated into 50 languages.</p></li>
+                            <li>Publication Year: {{data.years}}</li>
+                            <li>ISBN Number: {{data.isbn}}</li>
+                            
+                            
+                            <li>Average Rating(Goodreads): {{avg_rate}}</li>
+                            <li>Review Count(Goodreads): {{work_rate}}</li>
+                            
+                        </ul>
+                        </aside>
+                        {%endfor%}
+
+                        
+                    </div>
+                <div class="comment_sec">
+                    
+                    <div class="content">
+                        <h3><a href="#">Review This Book</a></h3>
+                    </div><br/>
+                    <form action="{{url_for('submitReview')}}" method="POST">
+                        <div class="form-group">
+                          <label for="exampleFormControlSelect1">Rate This Book</label>
+                          <select class="form-control" id="exampleFormControlSelect1" name="b_rate">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlTextarea1">Write Review</label>
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="b_review"></textarea>
+                        </div>
+                        <h3> {{sucess_msg}} </h3>
+                        <div class="form-group row">
+                            <div class="col-sm-10">
+                              <button type="submit" class="btn btn-primary">Submit Review</button>
+                            </div>
+                          </div>
+                      </form>
+                      
+                </div>
+                <div class="comments">
+                    <ul>
+                        {%for data in rbdata%}
+                        <li>
+                            <h4>{{data.name}}</h4>
+                            <p>Rating: {{data.rating}} out of 5</p>
+                            <p>{{data.review}}</p>
+                        </li>
+                        {%endfor%}
+                    </ul>
+    
+                </div>
+                <div class="comments">
+                    <button id="btn-1"><a href="{{url_for('updateReview')}}">Update your review</a></button>
+                    <button id="btn-2"><a href="{{url_for('deleteReview',rid=rvid)}}">Delete your review</a></button>
+                </div>
+                
+                
+            </div>
+                                
+        {%endblock%}
+    </body>
+</html>
+
+
+<!-- 
+
+
+    <br/>
+            <br/>
+            <div class="book_img"></div> 
+            <div class="about_book">
+                <h2>The Secret</h2>
+                <h3>Test author</h3>
+                <p>The Secret is a best-selling 2006 self-help book by Rhonda Byrne, based on the earlier film of the same name. It is based on the belief of the law of attraction, which claims that thoughts can change a person's life directly. The book has sold 30 million copies worldwide and has been translated into 50 languages.</p>
+                <ul>
+                    <li>Publication Year: 1989</li>
+                    <li>ISBN Number: 3652896579</li>
+                    <li>Average Rating(Goodreads): 3652896579</li>
+                    <li>Review Count(Goodreads): 3652896579</li>
+                </ul>
+            </div>   
+ -->

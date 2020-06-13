@@ -1,0 +1,40 @@
+body{font-size:14px; font-family: 'Poppins', sans-serif;}
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
+.bg-color{background-color:#333; height:840px}
+
+.menu{color:#CCC; list-style-type:none; padding:0}
+.menu li{padding:0; cursor:pointer; list-style-type:none}
+.menu li a{color:#CCC; text-decoration:none; display:block; padding:5px}
+.menu li a:hover{color:#FFF}
+.menu li ul{padding-left:10px}
+.menu>li{border-bottom:#666 1px solid}
+
+.list{position:absolute; top:315px; left:0; background-color:#000; width:100%; display:none}
+.list li{list-style-type:none; color:#666; padding:10px}
+.list li:hover{color:#FFF}
+.menu>li:hover .list{display:block}
+.list a{text-decoration:none; color:#666}
+.list a:hover{color:#FFF}
+
+.add_Member{background-color:#f0f3f4; font-size:18px; padding:10px; text-transform:uppercase}
+.add_Member h2{font-size:21px; font-weight:700}
+.users{padding:10px 0; font-weight:700}
+
+
+
+.form{  margin:0 auto; margin-top:15%}
+.sign a{color:#000; text-decoration:none}
+.sign a:hover{color:#ccc}
+.log{border-radius:20px; width:40%; text-decoration:none; color:#FFF}
+.log a{ text-decoration:none; color:#FFF}
+.password a{text-decoration:none; color:#666}
+.password a:hover{color:#000}
+
+.form_box{padding:20px; background-color:#ffff; border-radius:4px; box-shadow:0 0 10px #CCC}
+.login_bg{background-color:#CCC}
+
+.dashboard_right{padding:0}
+.dashboard_padding{padding:20px}
+.logo{padding:15px 0; text-align:center}
+
+.align_center{margin:0 auto}

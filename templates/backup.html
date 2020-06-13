@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../static/styley.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row"> 
+        <div class="col-2 bg-color">
+          <div class="logo"><img src="image/logo.png" alt="test"/></div>
+          <ul class="menu">
+              <li><a href="javascript:void()">The Readers</a></li>
+              
+                  <ul>
+                          <li> <a href="{{url_for('homepage')}}">Home Page</a></li>
+                         
+                  </ul>
+
+              </ul>
+          </div>
+                  <div class="col-10 dashboard_right">
+                      <div class="add_Member"><h2>Books Lists</h2></div>
+                      <div class="dashboard_padding">
+                        <br/>
+                        <div class="users">
+                            <form action="{{url_for('filterData')}}" method="POST">
+                            <div class="filter_box">
+                                <div class="row">
+                                    <div class="col-9"><input type="text" class="form-control" placeholder="Author, Title, Publication Year or ISBN-No." name="search"/></div>
+                                    <div class="col-1"><button type="submit" class="btn btn-secondary" >Search</button></div>
+                                    <div class="col-1"><button type="button" class="btn btn-secondary"><a href="{{url_for('logout')}}"> LogOut</a></button></div>
+                                </div>                     
+                            </div>
+                        </form>
+                        <br/>
+                        <h4>{{fail_tmsg}}</h4>
+                        </div>
+                    <br/>
+                      <form>
+                          <table class="table table-bordered">
+                              <thead>
+                                  <tr>
+                                      
+                                      <th scope="col">Title</th>
+                                      <th scope="col">Author</th>
+                                      <th scope="col">Years</th>
+                                      <th scope="col">ISBN</th>
+                                  </tr>
+                              </thead>
+                              {%for data in filterData%}
+                              <tbody>
+                                
+                                  
+                                  <td><a href="{{url_for('bdetails',isbn=data.isbn)}}">{{data.title}}</a></td>
+                                  <td>{{data.title}}</td>
+                                  <td>{{data.years}}</td>
+                                  <td><a href="{{url_for('testapi',isbn=data.isbn)}}">{{data.isbn}}</a></td>
+                                </tbody>
+                                
+                             
+                              {%endfor%}
+                          </table>
+                      </form>
+                  </div>
+              </div>
+          </div> 
+      </div>
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+      </div>
+  </div>
+</html>
+

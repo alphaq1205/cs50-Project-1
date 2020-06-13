@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+}
+
+
+.container{
+  margin: 16%;
+  width: 500px;
+  height: 290px;
+  border: 1px #333 solid;
+  border-radius: 50px;
+  
+}
+
+#custom-link{
+  color: #333;
+  padding-left: 520px;
+}
+
+
+.container h1{
+  text-align: center;
+  font-weight: bold;
+  padding-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(136, 129, 129);
+}
+
+.container button{
+  margin-top: 20px;
+  margin-left: 470px;
+  padding-left: 80px;
+  padding-right: 80px;
+  text-align: center;
+  font-size: 20px; 
+}
+
+#link-one{
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.container a:hover{
+  color: #fff;
+  text-decoration: none;
+}
+
+.container label{
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  /* color: rgb(56, 54, 54); */
+}
+
+
+/* ********************************************************FRONT PAGE *****************************************************/
+
+/* .color-1 {
+	background: #223e87;
+	opacity: 0.9;
+}
+ */
+
+
+
+.color-1{
+  background-color: #223e87;
+  opacity: 0.9;
+  margin-top: 190px;
+  padding: 157px;
+}
+
+.color-1 button{
+  margin-left: 390px;
+  padding: 15px 80px;
+  border: 2px solid #fff;
+  background-color: #223e87;
+}
+
+.color-1 a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+.color-1 button{
+  color: #fff;
+  text-decoration: none;
+}
+
+.front header{
+  text-align: center;
+  /* margin-top: 30px; */
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #333;
+  margin-top: 110px;
+}
+
+#but-two{
+  margin: 10px;
+}
+
+
+/* ******************************REGISTRATION FORM************************************************************ */
+
+
+
+.container-register{
+  margin: 16%;
+  width: 70%;
+  height: 350px;
+  border: 1px #333 solid;
+  border-radius: 50px;
+  
+}
+
+#custom-register-link{
+  color: #333;
+  padding-left: 570px;
+  margin-top: 20px;
+}
+
+#custom-link{
+  color: #333;
+  padding-left: 520px;
+}
+
+
+.container-register h1{
+  text-align: center;
+  font-weight: bold;
+  padding-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(136, 129, 129);
+}
+
+.container-register button{
+  margin-top: 20px;
+  margin-left: 470px;
+  padding-left: 80px;
+  padding-right: 80px;
+  text-align: center;
+  font-size: 20px; 
+}
+
+#link-one{
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.container-register a:hover{
+  color: #fff;
+  text-decoration: none;
+}
+
+.container label{
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  /* color: rgb(56, 54, 54); */
+}
+
+
+/* ****************Book Details********************************************************************************************** */
+
+
+.detail {
+  width: 80%;
+  margin-top: 20px;
+  margin-left: 20px;
+  overflow: hidden;
+  
+}
+
+.border{
+  height: 500px;
+  width: 1200px;
+  border: 1px solid black;
+}
+
+.comments{
+  width: 80%;
+  margin-top: 20px;
+  margin-left: 20px;
+  overflow: hidden;
+}
+
+.comments ul{
+  padding-left: 30px;
+  list-style: none;
+}
+
+.comments button{
+  margin-left: 200px;
+  margin-bottom: 20px;
+}
+
+#btn-1{
+  background-color: rgb(123, 103, 141);
+}
+#btn-2{
+  background-color: #343434;
+}
+
+.middle_sec{
+  width: 80%;
+  margin-top: 0px;
+  margin-left: 20px;
+  overflow: hidden;
+}
+
+.book_img{
+  float: right;
+  width: 18%;
+  height: 300px;
+  background-image: url('./images/book.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin: 50px;
+}
+
+.detail section{
+  text-align: center;
+}
+
+.comment_sec{
+  margin-top: 30px;
+  
+}
+
+.content a {
+  color: #333;
+}
+
+.content h1 {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 60px;
+  margin-bottom: 50px;
+}
+
+.detail ul {
+  padding-left: 30px;
+  list-style: none;
+}
+
+.sidebar{
+  float: left;
+  width: 70%;
+  height: 300px;
+}

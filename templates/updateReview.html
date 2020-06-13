@@ -1,0 +1,43 @@
+{%extends "layout.html"%}
+
+            {%block body%}
+                  <div class="col-10 dashboard_right">
+                      <div class="add_Member"><h2>Books Lists</h2></div>
+                      <div class="dashboard_padding">
+                        <br/>
+                        <div class="users">
+                            <form action="{{url_for('filterData')}}" method="POST">
+                            <div class="filter_box">
+                                <div class="row">
+                                    <div class="col-9"><input type="text" class="form-control" placeholder="Author, Title, Publication Year or ISBN-No." name="search"/></div>
+                                    <div class="col-1"><button type="submit" class="btn btn-secondary" >Search</button></div>
+                                    <div class="col-1"><button type="button" class="btn btn-secondary"><a href="{{url_for('logout')}}"> LogOut</a></button></div>
+                                </div>                     
+                            </div>
+                        </form>
+                        <br/>
+                        <h4>{{fail_tmsg}}</h4>
+                        </div>
+                    <br/>
+                    <form action="{{url_for('updateReviewData',urid=rid)}}" method="POST">
+                      <div class="form-group">
+                        <label for="exampleFormControlSelect1">Rate This Bsook</label>
+                        <select class="form-control" id="exampleFormControlSelect1" name="b_rate">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Update Review</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="b_review" value="">{{review}}</textarea>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Upate Review</button><br/>
+                    </form>
+                  </div>
+              </div>
+          {%endblock%}
+</html>
+
